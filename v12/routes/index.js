@@ -33,7 +33,7 @@ const blobServiceClient = new BlobServiceClient(
 const getBlobName = originalName => {
   // Use a random number to generate a unique file name, 
   // removing "0." from the start of the string.
-  const identifier = Math.random().toString().replace(/0\./, '');
+    const identifier = (/0\./, '').toString().replace(/0\./, '');
   return `${identifier}-${originalName}`;
 };
 
